@@ -16,14 +16,14 @@ import SearchIcon from '@material-ui/icons/Search';
 
 export default () => {
 
-  const [chatList, setChatList] = useState([])
-  const [activeChat, setActiveChat] = useState({})
-  const [user, setUser] = useState(null)
-  const [showNewChat, setShowNewChat] = useState(false)
+  const [chatList, setChatList] = useState([]);
+  const [activeChat, setActiveChat] = useState({});
+  const [user, setUser] = useState(null);
+  const [showNewChat, setShowNewChat] = useState(false);
 
   useEffect(()=>{
     if(user !== null) {
-      let unsub = Api.onChatList(user.id, setChatList)
+      let unsub = Api.onChatList(user.id, setChatList);
       return unsub
     }
   }, [user])
@@ -36,7 +36,8 @@ export default () => {
       let newUser = {
         id: u.uid,
         name: u.displayName,
-        avatar: u.photoURL
+        //need acess token to get photoURL
+        avatar: u.photoURL 
       }
       await Api.addUser(newUser);
       setUser(newUser);

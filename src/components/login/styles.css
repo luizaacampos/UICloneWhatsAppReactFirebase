@@ -4,3 +4,21 @@
     justify-content: center;
     align-items: center;
 }
+
+button {
+    width: 250px;
+    height: 60px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: helvetica, Arial, sans-serif;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
