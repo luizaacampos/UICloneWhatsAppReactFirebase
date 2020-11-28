@@ -114,3 +114,12 @@ aside.emoji-picker-react {
 .emoji-picker-react .emoji-group:before {
     background: none;
 }
+
+.emoji-picker-react .emoji button {
+    width: 35px;
+}
+
+.emoji-picker-react img.emoji-img {
+    height: 30px;
+    width: 30px;
+}
